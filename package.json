@@ -1,11 +1,17 @@
 {
   "devDependencies": {
+    "@parcel/transformer-elm": "^2.0.1",
+    "elm": "^0.19.1-5",
     "elm-format": "^0.8.5",
     "husky": "^7.0.0",
-    "lint-staged": "^12.1.2"
+    "lint-staged": "^12.1.2",
+    "parcel": "^2.0.1"
   },
+  "source": "index.html",
   "scripts": {
-    "prepare": "husky install"
+    "build": "parcel build",
+    "prepare": "husky install",
+    "start": "parcel"
   },
   "lint-staged": {
     "*.elm": "elm-format --yes"

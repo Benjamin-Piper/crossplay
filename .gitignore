@@ -7,7 +7,12 @@ elm-stuff
 # elm-repl generated files
 repl-temp-*
 
+### Node.js ###
 node_modules
+
+### Parcel ###
+dist
+.parcel-cache
 
 # End of https://www.toptal.com/developers/gitignore/api/elm
 
