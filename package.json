@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "elm-format": "^0.8.5",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.2"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.elm": "elm-format --yes"
+  }
+}

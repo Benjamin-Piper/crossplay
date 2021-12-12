@@ -6,7 +6,6 @@ module Main exposing (..)
 --   https://guide.elm-lang.org/architecture/buttons.html
 --
 
-
 import Browser
 import Html exposing (Html, button, div, text)
 import Html.Events exposing (onClick)
@@ -16,20 +15,22 @@ import Html.Events exposing (onClick)
 -- MAIN
 
 
+main : Program () Model Msg
 main =
-  Browser.sandbox { init = init, update = update, view = view }
+    Browser.sandbox { init = init, update = update, view = view }
 
 
 
 -- MODEL
 
 
-type alias Model = Int
+type alias Model =
+    Int
 
 
 init : Model
 init =
-  0
+    0
 
 
 
@@ -37,18 +38,18 @@ init =
 
 
 type Msg
-  = Increment
-  | Decrement
+    = Increment
+    | Decrement
 
 
 update : Msg -> Model -> Model
 update msg model =
-  case msg of
-    Increment ->
-      model + 1
+    case msg of
+        Increment ->
+            model + 1
 
-    Decrement ->
-      model - 1
+        Decrement ->
+            model - 1
 
 
 
@@ -57,8 +58,8 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-  div []
-    [ button [ onClick Decrement ] [ text "-" ]
-    , div [] [ text (String.fromInt model) ]
-    , button [ onClick Increment ] [ text "+" ]
-    ]
+    div []
+        [ button [ onClick Decrement ] [ text "-" ]
+        , div [] [ text (String.fromInt model) ]
+        , button [ onClick Increment ] [ text "+" ]
+        ]
