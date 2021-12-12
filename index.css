@@ -1,0 +1,24 @@
+.crossword {
+    display: grid;
+    --cell-size: 50px;
+    --grid-size: 13;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    -webkit-mask-repeat-x: calc(var(--grid-size) * var(--cell-size));
+    width: calc(var(--grid-size) * var(--cell-size));
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 2px solid black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell.white {
+    background-color: white;
+}
+
+.cell.black {
+    background-color: rgba(0, 0, 0, 0.9);
+}
